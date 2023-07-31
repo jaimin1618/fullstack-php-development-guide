@@ -1,0 +1,15 @@
+CSRF => CROSS SITE REQUEST FORGERY
+
+- Hacker tricks users into making request to THRID PARTY/HACKER'S SERVER on behalf of User.
+
+- They can be used for fraudulent request on your website from USER through HACKER.
+
+- Most harmful is: Hacker can access logged in state of USER and starts requesting to your page on behalf of USER.
+
+
+HOW TO SOLVE?
+
+- GET request should be make any changes like Password, Bank acc. no., address, etc.
+- Use POST request for making any changes
+- Store form TOKEN in user's session | also store TOKEN generation time to see it is NEW/RECENT or NOT
+- Add hidden field in form with form token as value

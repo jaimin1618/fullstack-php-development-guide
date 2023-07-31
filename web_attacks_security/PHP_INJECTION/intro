@@ -1,0 +1,15 @@
+Just Like SQL and JavaScript injection PHP injection when Hacker is able to inject PHP script on web server
+
+- Similar to remote system execution
+- Most common way it happens is PHP function eval("STRING")
+        : eval() executes string inside of it as it is PHP Code
+        : eval('echo Robot;');
+- It can also be done using REMOTE FILE INCLUSION, Here include() and require() are used to insert ATTACKERS PHP script
+        : eval(" echo 'hello'; ?> <script> alert('hacked!'); </script> <?php ");
+        
+- PHP code injection using include() / require()
+
+HOW TO SOLVE?
+
+- NOT to use eval()
+- Try to avoid dynamic data using eval(), include(), require()

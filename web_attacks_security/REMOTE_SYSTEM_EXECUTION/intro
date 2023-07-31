@@ -1,0 +1,20 @@
+MOST POWERFULL ATTACK OF ALL - Remote system execution
+
+- Hacker runs OS commands on web-server (Remotely)
+- It can run any OS command
+- typically hard to achieve for Hacker
+
+PHP has SYSTEM execution function which allows to access OS.
+Using anyone of these is considered SECURITY RED FLAG
+- exec | passthru | popen | proc_open | shell_exec | system
+
+
+HOW TO SOLVE?
+
+- Avoid using these functions
+- Use them after getting complete knowledge of system function
+- you can use:
+    escapeshellcmd($string);
+    escapeshellarg($string);
+to prevent from these attacks
+    

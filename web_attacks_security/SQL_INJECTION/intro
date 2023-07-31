@@ -1,0 +1,9 @@
+- When Hacker passes SQL queries from Request Or inputs
+- Malicious code executes SQL query on SERVER Side and results break in SQL query
+- Most harmful for APPLICATION DATABASE
+
+HOW TO SOLVE?
+0. Grant low privileges to application using SQL privileges setting
+1. Use MySQL escape string
+2. Use prepared statements
+

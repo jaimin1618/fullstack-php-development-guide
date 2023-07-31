@@ -1,0 +1,20 @@
+XSS => CROSS SITE SCRIPTING
+
+- When hacker tries to inject JavaScript code on user's page or any pages of our website
+
+- Trick is to gain access of running JavaScript code on page and manipulate it
+  then use this script to steal $_COOKIE on user's PC.
+
+- It can be done by including URL parameter of script on GET request: GET /register.php?email=<script>alert('hacked!');</script>
+  when you have this line in code => email: <?php $_GET['email']; ?>
+  it will convert it into => email: <script>alert('hacked!');</ script>
+  
+  ** just difference is HACKER WILL USE  HARDCODED,
+  DEEP JAVASCRIPT to gain access of user's COOKIE and other things **
+  
+  
+HOW TO DEFEND;
+
+- Sanitize user INPUTS + REQUEST(get, post, ajax etc...) before using them in backend
+- this attack mostly happens from User forms
+- You should also Sanitize data coming from DATABASE, FILES, SESSIONS, COOKIES
